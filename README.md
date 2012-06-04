@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 Symfony Standard Edition
 ========================
 
@@ -146,6 +147,12 @@ The Symfony Standard Edition comes pre-configured with the following bundles:
 * **AcmeDemoBundle** (in dev/test env) - A demo bundle with some example code
 
 Enjoy!
+=======
+cupon
+=====
+
+Ejemplo de aplicacion de cupon del libro de symfony
+>>>>>>> 7b81caaa087d578af0413ea0c58298834d7945a8
 =======
 cupon
 =====
