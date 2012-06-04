@@ -1,3 +1,6 @@
+# Configuracion de NetBeans
+/nbproject/private/
+
 # Bootstrap
 app/bootstrap*
 
