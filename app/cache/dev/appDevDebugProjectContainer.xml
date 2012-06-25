@@ -20,6 +20,7 @@
       <parameter key="OfertaBundle">Cupon\OfertaBundle\OfertaBundle</parameter>
       <parameter key="CiudadBundle">Cupon\CiudadBundle\CiudadBundle</parameter>
       <parameter key="TiendaBundle">Cupon\TiendaBundle\TiendaBundle</parameter>
+      <parameter key="UsuarioBundle">Cupon\UsuarioBundle\UsuarioBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
       <parameter key="SensioGeneratorBundle">Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle</parameter>
@@ -1976,6 +1977,33 @@
                   <argument type="service" id="templating.loader"/>
                   <argument>TiendaBundle</argument>
                   <argument>/home/juanin/proyectos/cupon/src/Cupon/TiendaBundle/Resources/views</argument>
+                  <argument>/^[^.]+\.[^.]+\.twig$/</argument>
+                </service>
+              </argument>
+            </argument>
+          </service>
+        </argument>
+        <argument>twig</argument>
+      </call>
+      <call method="addResource">
+        <argument type="service">
+          <service class="Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource" public="false">
+            <tag name="assetic.templating.twig"/>
+            <tag name="assetic.formula_resource" loader="twig"/>
+            <argument type="collection">
+              <argument type="service">
+                <service class="%assetic.directory_resource.class%" public="false">
+                  <argument type="service" id="templating.loader"/>
+                  <argument>UsuarioBundle</argument>
+                  <argument>/home/juanin/proyectos/cupon/app/Resources/UsuarioBundle/views</argument>
+                  <argument>/^[^.]+\.[^.]+\.twig$/</argument>
+                </service>
+              </argument>
+              <argument type="service">
+                <service class="%assetic.directory_resource.class%" public="false">
+                  <argument type="service" id="templating.loader"/>
+                  <argument>UsuarioBundle</argument>
+                  <argument>/home/juanin/proyectos/cupon/src/Cupon/UsuarioBundle/Resources/views</argument>
                   <argument>/^[^.]+\.[^.]+\.twig$/</argument>
                 </service>
               </argument>
