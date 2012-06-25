@@ -1,0 +1,24 @@
+############
+## Windows
+############
+# Windows image file caches
+Thumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Configuracion de NetBeans
+/nbproject/private/
+
+# Bootstrap
+app/bootstrap*
+
+# Symfony directories
+vendor/*
+app/logs/*
+app/cache/*
+web/uploads/*
+web/bundles/*
+
+# Configuration files
+app/config/parameters.ini
